@@ -106,8 +106,8 @@ function chainPromises(array, action) {
   const p = Promise.resolve(array);
   return p
     .then((arr) => {
-      arr.forEach(item => {
-        item.then(value => resultArr.push(value)).catch(() => 0);
+      arr.forEach((el) => {
+        el.then((val) => resultArr.push(val)).catch(() => 0);
       });
     })
     .then(() => resultArr.reduce((result, rec) => action(result, rec)));
