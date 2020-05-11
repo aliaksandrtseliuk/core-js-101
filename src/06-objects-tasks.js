@@ -53,7 +53,7 @@ function getJSON(obj) {
 function fromJSON(proto, json) {
   function Foo(obj) {
     const keys = Object.keys(obj);
-    keys.forEach(key => {
+    keys.forEach((key) => {
       this[key] = obj[key];
     });
   }
